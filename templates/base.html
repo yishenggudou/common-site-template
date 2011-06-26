@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="{% block meta_keywords %}{% endblock %}" />
+	<meta name="description" content="{% block meta_description %}{% endblock %}" />
+
+	<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" />
+	<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
+	{% block extra_css %}{% endblock %}
+
+	<!-- from google CDN
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	-->
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.6.1.min.js"></script>
+	{% block extra_js %}{% endblock %}
+
+	{% block head_extra %}{% endblock %}
+</head>
+
+<body>
+	<div id="header">
+		<ul>
+			<li><a href="{% url home-page %}">Home</a></li>
+			<li><a href="{% url about-page %}">About</a></li>
+			<li><a href="{% url contacts-page %}">Contacts</a></li>
+		</ul>
+	</div>
+	<div id="content">{% block content %}{% endblock %}</div>
+	<div id="footer"></div>
+	<img src="{{ STATIC_URL }}img/Social_RSS.png" />
+</body>
+</html>
