@@ -9,8 +9,10 @@ from django.shortcuts import render_to_response
 def homepage(request):
     return render(request, 'main/home.html', {})
 
+
 def about(request):
     return render(request, 'main/about.html', {})
+
 
 def contacts(request):
     return render(request, 'main/contacts.html', {})

@@ -1,6 +1,9 @@
 import os.path as op
 from settings import PROJECT_ROOT
 
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
 DB_PATH = op.join(PROJECT_ROOT, 'db')
 
 # Database

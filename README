@@ -1,5 +1,11 @@
 Common django site project.
 
+http://django-tinymce.googlecode.com/
+
 INSALLATION
 
 1) install apps from pipreq.txt
+
+DEPLOY
+
+1) remove or rename settings_local.py
