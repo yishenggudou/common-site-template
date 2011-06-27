@@ -70,7 +70,7 @@ STATIC_URL = '/static/'
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+ADMIN_MEDIA_PREFIX = '/static/grappelli/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -113,6 +113,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'grappelli',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -125,6 +126,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     # 3rd party libs
     'tinymce',
+    'filebrowser',
     # project apps
     'control',
     'main',
@@ -154,12 +156,12 @@ LOGGING = {
 }
 
 try:
-    from settings_local import *
+    from config import *
 except ImportError:
-    pass
+    raise Exception('Store your config values in config.py file')
 
 try:
-    from config import *
+    from settings_local import *
 except ImportError:
     pass
 
