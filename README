@@ -1,6 +1,8 @@
 Common django site project.
 
 http://django-tinymce.googlecode.com/
+http://code.google.com/p/django-filebrowser/
+http://code.google.com/p/django-grappelli/
 
 INSALLATION
 
@@ -9,3 +11,37 @@ INSALLATION
 DEPLOY
 
 1) remove or rename settings_local.py
+
+
+So wtf is it.
+
+This is small app i use for fast development of small-business sites. There is all you need
+for common tasks : news application, articles, services menu, about and contact us pages.
+
+I'll maintain all this shit trying to make it better and easy to use, stay turned.
+
+
+Cool JQuery things you can use :
+================================
+
+NavMenu:
+ - Sprites2 http://www.alistapart.com/articles/sprites2
+ - Sliding jQuery menu http://www.hv-designs.co.uk/2009/02/17/sliding-jquery-menu/
+ - Kwicks http://www.jeremymartin.name/projects.php?project=kwicks#
+ - Drop Down menu http://www.noupe.com/tutorial/drop-down-menu-jquery-css.html
+ - Lava Lamp! http://www.gmarwaha.com/blog/2007/08/23/lavalamp-for-jquery-lovers/
+ - Simple Menu http://www.kriesi.at/archives/create-a-multilevel-dropdown-menu-with-css-and-improve-it-via-jquery
+ - jQuery Flipping Menu http://www.queness.com/post/685/jquery-flipping-menu-tutorial-using-backgroundposition-plugin
+ - 
+
+sources: 
+ - http://www.1stwebdesigner.com/css/38-jquery-and-css-drop-down-multi-level-menu-solutions/
+ - http://slodive.com/web-development/best-jquery-dropdown-menus/
+
+Sliders:
+ - Coda content slider http://www.ndoherty.biz/2009/10/coda-slider-2/
+
+Tabs/Hoovers/Accordions:
+ - Slick Tab http://net.tutsplus.com/tutorials/html-css-techniques/how-to-create-a-slick-tabbed-content-area/
+ 
+  

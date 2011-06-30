@@ -1,0 +1,8 @@
+28 jun:
+- added default dropdown menu
+- "services" list added
+- template tags for services
+
+30 jun:
+- news application
+- base template issues

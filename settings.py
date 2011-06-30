@@ -9,7 +9,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('istinspring', 'istinspring@gmail.com'),
+    ('youruser', 'your@mail.com'),
 )
 
 MANAGERS = ADMINS
@@ -166,4 +166,4 @@ except ImportError:
     pass
 
 if not SECRET_KEY:
-    raise Exception('You must provide SECRET_KEY value in settings_local.py')
+    raise Exception('You must provide SECRET_KEY value in settings_local.py or in config.py')

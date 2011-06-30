@@ -15,21 +15,43 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 	-->
 	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" language="javascript" src="{{ STATIC_URL }}js/jquery.dropdownPlain.js"></script>
 	{% block extra_js %}{% endblock %}
 
 	{% block head_extra %}{% endblock %}
 </head>
 
 <body>
+
 	<div id="header">
-		<ul>
+		<h1>Site title</h1>
+	</div>
+
+	<div id="nav_menu">
+		<ul class="dropdown">
 			<li><a href="{% url home-page %}">Home</a></li>
+			<li class="sub_menu">
+				<a href="#">Services</a>
+				{% load site_tags %}
+				{% services_list %}
+			</li>
 			<li><a href="{% url about-page %}">About</a></li>
 			<li><a href="{% url contacts-page %}">Contacts</a></li>
 		</ul>
+	</div>	
+	
+	<div id="content">
+		<div class="content_wrapper">
+			<div id="content_box">		
+				{% block content %}{% endblock %}
+			</div>
+			<div id="sidebar_box">
+				{% block sidebar %}{% endblock %}
+			</div>
+		</div>
 	</div>
-	<div id="content">{% block content %}{% endblock %}</div>
+	
 	<div id="footer"></div>
-	<img src="{{ STATIC_URL }}img/Social_RSS.png" />
+
 </body>
 </html>
