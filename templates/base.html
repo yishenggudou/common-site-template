@@ -29,14 +29,15 @@
 
 	<div id="nav_menu">
 		<ul class="dropdown">
-			<li><a href="{% url home-page %}">Home</a></li>
+			<li><a href="{% url main:home-page %}">Home</a></li>
 			<li class="sub_menu">
 				<a href="#">Services</a>
 				{% load site_tags %}
 				{% services_list %}
 			</li>
-			<li><a href="{% url about-page %}">About</a></li>
-			<li><a href="{% url contacts-page %}">Contacts</a></li>
+			<li><a href="{% url news:all-news-page %}">News</a></li>
+			<li><a href="{% url main:contacts-page %}">Contacts</a></li>
+			<li><a href="{% url main:about-page %}">About</a></li>
 		</ul>
 	</div>	
 	

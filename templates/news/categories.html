@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}News Categories{% endblock %}
+{% block meta_keywords %}key, words{% endblock %}
+{% block meta_description %}home page description{% endblock %}
+
+{% block content %}
+	{% for category in categories %}
+	<h1><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></h1>
+	<p>{{ category.description }}</p>
+	{% empty %}
+	<p>there is no categories</p>
+	{% endfor %}
+{% endblock %}

@@ -13,7 +13,7 @@ DEPLOY
 1) remove or rename settings_local.py
 
 
-So wtf is it.
+So wtf is it?
 
 This is small app i use for fast development of small-business sites. There is all you need
 for common tasks : news application, articles, services menu, about and contact us pages.

@@ -8,7 +8,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class NewsPostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'text', 'pub_date')
+    list_display = ('title', 'description', 'content', 'pub_date')
     search_field = ('title', 'pub_date')
     prepopulated_fields = {"slug": ("title",)}
 

@@ -11,7 +11,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin/', include('grappelli.urls')),
     url(r'^admin/filebrowser/', include('filebrowser.urls')),                       
-    url(r'', include('main.urls')),
+    (r'', include('main.urls', namespace='main', app_name='main')),
+    (r'^news/', include('news.urls', namespace='news', app_name='news')),
 )
 
 

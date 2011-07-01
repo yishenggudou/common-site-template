@@ -3,7 +3,9 @@ import sys
 import os.path as op
 
 PROJECT_ROOT = op.dirname(op.realpath(__file__))
-sys.path.insert(0, op.join(PROJECT_ROOT, 'apps'))
+
+if not op.join(PROJECT_ROOT, 'apps') in sys.path:
+    sys.path.insert(0, op.join(PROJECT_ROOT, 'apps'))
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -130,6 +132,7 @@ INSTALLED_APPS = (
     # project apps
     'control',
     'main',
+    'news',
 )
 
 # A sample logging configuration. The only tangible logging
