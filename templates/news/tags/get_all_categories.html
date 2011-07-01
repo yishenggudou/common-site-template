@@ -1,0 +1,9 @@
+<div class="all_categories_list">
+	{% if categories %}
+	<ul>
+		{% for category in categories %}
+		<li>{{ category.title }}</li>
+		{% endfor %}		
+	</ul>
+	{% endif%}
+</div>

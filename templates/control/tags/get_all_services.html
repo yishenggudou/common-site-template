@@ -1,6 +1,6 @@
 <ul>
 	{% for service in services %}
-	<li><a href="{% url service-page service.slug %}">{{ service.title }}</a></li>
+	<li><a href="{% url control:service-page service.slug %}">{{ service.title }}</a></li>
 	{% empty %}
 	<li>There is no service</li>
 	{% endfor %}

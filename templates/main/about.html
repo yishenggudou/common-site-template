@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-about block. detailed company info
+	{% load control_tags %}
+	{% show_content "about" %}
 {% endblock %}

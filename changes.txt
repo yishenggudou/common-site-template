@@ -6,3 +6,10 @@
 30 jun:
 - news application
 - base template issues
+
+1 jul:
+- news application fixes
+- changes in application structure (some shit moved to 'control' app)
+- services app
+- template tag for categories
+- template tag for ContentBlock

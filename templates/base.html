@@ -32,8 +32,8 @@
 			<li><a href="{% url main:home-page %}">Home</a></li>
 			<li class="sub_menu">
 				<a href="#">Services</a>
-				{% load site_tags %}
-				{% services_list %}
+				{% load control_tags %}
+				{% get_all_services %}
 			</li>
 			<li><a href="{% url news:all-news-page %}">News</a></li>
 			<li><a href="{% url main:contacts-page %}">Contacts</a></li>
@@ -48,6 +48,7 @@
 			</div>
 			<div id="sidebar_box">
 				{% block sidebar %}{% endblock %}
+				{% load news_tags %}{% get_all_categories %}
 			</div>
 		</div>
 	</div>

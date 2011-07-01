@@ -21,11 +21,11 @@ body {
 #content div.content_wrapper {
 	margin: 5px;
 	min-height: 490px;
-	border: 1px solid #000;
+	/* border: 1px solid #000; */
 }
 
 #content_box {
-	width: 67%;
+	width: 67.2%;
 	margin: 5px 5px;
 	float: left;
 	min-height: 475px;

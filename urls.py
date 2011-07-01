@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^admin/filebrowser/', include('filebrowser.urls')),                       
     (r'', include('main.urls', namespace='main', app_name='main')),
     (r'^news/', include('news.urls', namespace='news', app_name='news')),
+    (r'^service/', include('control.urls', namespace='control', app_name='control')),
 )
 
 

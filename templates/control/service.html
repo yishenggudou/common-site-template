@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Service desc{% endblock %}
+{% block meta_keywords %}key, words{% endblock %}
+{% block meta_description %}service page description{% endblock %}
+
+{% block content %}
+	<h1><a href="#">{{ service.title }}</a></h1>
+	{% autoescape off %}
+	<p>{{ service.content }}</p>
+	{% endautoescape %}
+{% endblock %}
