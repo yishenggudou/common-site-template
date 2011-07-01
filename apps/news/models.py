@@ -14,17 +14,20 @@ class Category(models.Model):
     pic = models.ImageField(upload_to="news/category", blank=True)
 
     class Meta:
-        verbose_name = "Categories"
-        verbose_name_plural = "Category"
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
 
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(translify(self.name))
         super(Category, self).save(*args, **kwargs)
 
+    @models.permalink
     def get_absolute_url(self):
-        return reverse('category', args=[self.slug])
-    
+        return ('news:category-page', (), {
+            'cat_slug': self.slug,
+            })
+        
     def __unicode__(self):
         return self.title
     
@@ -59,8 +62,12 @@ class NewsPost(models.Model):
     def get_category(self):
         return self.category
 
+    @models.permalink
     def get_absolute_url(self):
-        return reverse('news_post', args=[self.get_category_slug, self.slug])
+        return ('news:news-post-page', (), {
+            'cat_slug': self.category.slug,
+            'post_slug': self.slug,
+            })
 
     def __unicode__(self):
         return self.title        

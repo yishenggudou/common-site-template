@@ -12,7 +12,7 @@ posts - extracted posts
 
 def all_news(request):
     news_list = NewsPost.objects.filter(is_draft=False)
-    #print reverse('category', args=['obshie'])
+    print news_list[1].get_absolute_url()
     return render(request, 'news/all_news.html', {'posts': news_list})
 
 
