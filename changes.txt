@@ -13,3 +13,5 @@
 - services app
 - template tag for categories
 - template tag for ContentBlock
+- rss for news
+- sitemap for news
